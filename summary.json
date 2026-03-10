@@ -1,0 +1,29 @@
+{
+  "start_date": "2026-03-10",
+  "portfolios": {
+    "conservative": {
+      "total_days": 1,
+      "current_value": 2000000.0
+    },
+    "experimental": {
+      "total_days": 1,
+      "current_value": 2000000.0
+    }
+  },
+  "daily": [
+    {
+      "date": "2026-03-10",
+      "conservative": {
+        "total_value": 2000000.0,
+        "cash": 2000000.0,
+        "n_positions": 0
+      },
+      "experimental": {
+        "total_value": 2000000.0,
+        "cash": 2000000.0,
+        "n_positions": 0
+      }
+    }
+  ],
+  "last_updated": "2026-03-10"
+}

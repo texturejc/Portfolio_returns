@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Semantic Trader</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+<style>
+  :root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --border: #30363d;
+    --text: #e6edf3;
+    --text-muted: #8b949e;
+    --green: #3fb950;
+    --red: #f85149;
+    --blue: #58a6ff;
+    --purple: #bc8cff;
+    --orange: #d29922;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    padding: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 16px;
+  }
+  header h1 { font-size: 1.8rem; font-weight: 600; }
+  header .updated { color: var(--text-muted); font-size: 0.9rem; }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+  }
+  .card h2 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+  }
+  .card .metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .metric-label { font-size: 0.75rem; color: var(--text-muted); }
+  .metric-value { font-size: 1.3rem; font-weight: 600; }
+  .metric-value.positive { color: var(--green); }
+  .metric-value.negative { color: var(--red); }
+  .chart-container {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+  .chart-container h3 {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    color: var(--text-muted);
+  }
+  .chart-wrap { position: relative; height: 300px; }
+  .charts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  @media (max-width: 900px) {
+    .charts-grid { grid-template-columns: 1fr; }
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+  th {
+    text-align: left;
+    padding: 8px 12px;
+    border-bottom: 2px solid var(--border);
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  td {
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  tr:last-child td { border-bottom: none; }
+  .action-buy { color: var(--green); font-weight: 600; }
+  .action-sell { color: var(--red); font-weight: 600; }
+  .action-hold { color: var(--text-muted); }
+  .tables-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  @media (max-width: 900px) {
+    .tables-grid { grid-template-columns: 1fr; }
+  }
+  .recon-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .status-msg {
+    text-align: center;
+    padding: 48px;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+  }
+  .portfolio-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+  .tag-conservative { background: rgba(88,166,255,0.15); color: var(--blue); }
+  .tag-experimental { background: rgba(188,140,255,0.15); color: var(--purple); }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Semantic Trader</h1>
+  <span class="updated" id="lastUpdated">Loading...</span>
+</header>
+
+<div id="content">
+  <div class="status-msg" id="loading">Loading portfolio data...</div>
+</div>
+
+<script>
+const BASE = 'https://raw.githubusercontent.com/texturejc/Portfolio_returns/main';
+
+const fmt = (v, decimals = 2) => v != null ? v.toFixed(decimals) : '—';
+const fmtPct = (v) => v != null ? `${v >= 0 ? '+' : ''}${v.toFixed(2)}%` : '—';
+const fmtGBP = (v) => v != null ? `£${v.toLocaleString('en-GB', {minimumFractionDigits: 0, maximumFractionDigits: 0})}` : '—';
+
+function colorClass(v) {
+  if (v == null) return '';
+  return v >= 0 ? 'positive' : 'negative';
+}
+
+async function fetchJSON(url) {
+  const r = await fetch(url);
+  if (!r.ok) throw new Error(`${r.status} ${r.statusText}`);
+  return r.json();
+}
+
+function renderCards(portfolios) {
+  const names = { conservative: 'Conservative', experimental: 'Experimental' };
+  const tags = { conservative: 'tag-conservative', experimental: 'tag-experimental' };
+  return Object.entries(portfolios).map(([key, p]) => `
+    <div class="card">
+      <h2>${names[key] || key} <span class="portfolio-tag ${tags[key] || ''}">${key}</span></h2>
+      <div class="metrics">
+        <div><div class="metric-label">Current Value</div><div class="metric-value">${fmtGBP(p.current_value)}</div></div>
+        <div><div class="metric-label">Total Return</div><div class="metric-value ${colorClass(p.total_return_pct)}">${fmtPct(p.total_return_pct)}</div></div>
+        <div><div class="metric-label">Max Drawdown</div><div class="metric-value negative">${fmtPct(p.max_drawdown_pct)}</div></div>
+        <div><div class="metric-label">Sharpe Ratio</div><div class="metric-value ${colorClass(p.sharpe_ratio)}">${fmt(p.sharpe_ratio, 3)}</div></div>
+        <div><div class="metric-label">Days Tracked</div><div class="metric-value">${p.total_days || '—'}</div></div>
+        <div><div class="metric-label">Initial Value</div><div class="metric-value">${fmtGBP(p.initial_value)}</div></div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderSignalsTable(portfolio, data) {
+  if (!data || !data.predictions) return '<p style="color:var(--text-muted);padding:12px;">No signal data</p>';
+  const etfs = Object.keys(data.predictions).sort();
+  const rows = etfs.map(etf => {
+    const pred = data.predictions[etf];
+    const action = data.actions ? data.actions[etf] : '—';
+    const cls = action === 'buy' ? 'action-buy' : action === 'sell' ? 'action-sell' : 'action-hold';
+    return `<tr><td>${etf}</td><td>${fmt(pred, 4)}</td><td class="${cls}">${action}</td></tr>`;
+  }).join('');
+  return `<table><thead><tr><th>ETF</th><th>Prediction</th><th>Action</th></tr></thead><tbody>${rows}</tbody></table>`;
+}
+
+function renderRecon(data) {
+  if (!data || !data.reconciliation) return '<p style="color:var(--text-muted);padding:12px;">No reconciliation data</p>';
+  const r = data.reconciliation;
+  return `
+    <div class="recon-grid">
+      <div><div class="metric-label">Recon Date</div><div class="metric-value" style="font-size:1rem;">${r.date || '—'}</div></div>
+      <div><div class="metric-label">Hit Rate</div><div class="metric-value" style="font-size:1rem;">${r.hit_rate != null ? fmtPct(r.hit_rate * 100) : '—'}</div></div>
+      <div><div class="metric-label">IC</div><div class="metric-value" style="font-size:1rem;">${r.ic != null ? fmt(r.ic, 4) : '—'}</div></div>
+    </div>`;
+}
+
+function createChart(ctx, config) {
+  Chart.defaults.color = '#8b949e';
+  Chart.defaults.borderColor = '#30363d';
+  return new Chart(ctx, config);
+}
+
+function buildEquityCurve(daily) {
+  const labels = daily.map(d => d.date);
+  const datasets = [];
+  const keys = ['conservative', 'experimental'];
+  const colors = { conservative: '#58a6ff', experimental: '#bc8cff' };
+
+  keys.forEach(k => {
+    if (daily[0] && daily[0][k]) {
+      datasets.push({
+        label: k.charAt(0).toUpperCase() + k.slice(1),
+        data: daily.map(d => d[k] ? d[k].total_value : null),
+        borderColor: colors[k],
+        backgroundColor: colors[k] + '20',
+        fill: true,
+        tension: 0.3,
+        pointRadius: 0,
+        borderWidth: 2
+      });
+    }
+  });
+
+  return {
+    type: 'line',
+    data: { labels, datasets },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      scales: {
+        x: { type: 'category', ticks: { maxTicksAutoSkip: true, maxRotation: 0 } },
+        y: { ticks: { callback: v => '£' + (v/1000).toFixed(0) + 'k' } }
+      },
+      plugins: { legend: { position: 'top' } }
+    }
+  };
+}
+
+function buildDailyReturns(daily) {
+  const labels = daily.slice(1).map(d => d.date);
+  const keys = ['conservative', 'experimental'];
+  const colors = { conservative: '#58a6ff', experimental: '#bc8cff' };
+  const datasets = [];
+
+  keys.forEach(k => {
+    if (daily[0] && daily[0][k]) {
+      const returns = [];
+      for (let i = 1; i < daily.length; i++) {
+        const prev = daily[i-1][k] ? daily[i-1][k].total_value : null;
+        const curr = daily[i][k] ? daily[i][k].total_value : null;
+        returns.push(prev && curr ? ((curr / prev - 1) * 100) : null);
+      }
+      datasets.push({
+        label: k.charAt(0).toUpperCase() + k.slice(1),
+        data: returns,
+        backgroundColor: returns.map(r => r != null && r >= 0 ? colors[k] + '99' : '#f8514999'),
+        borderColor: colors[k],
+        borderWidth: 1
+      });
+    }
+  });
+
+  return {
+    type: 'bar',
+    data: { labels, datasets },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      scales: {
+        x: { ticks: { maxTicksAutoSkip: true, maxRotation: 0 } },
+        y: { ticks: { callback: v => v.toFixed(1) + '%' } }
+      },
+      plugins: { legend: { position: 'top' } }
+    }
+  };
+}
+
+function buildPositionCount(daily) {
+  const labels = daily.map(d => d.date);
+  const keys = ['conservative', 'experimental'];
+  const colors = { conservative: '#58a6ff', experimental: '#bc8cff' };
+  const datasets = [];
+
+  keys.forEach(k => {
+    if (daily[0] && daily[0][k]) {
+      datasets.push({
+        label: k.charAt(0).toUpperCase() + k.slice(1),
+        data: daily.map(d => d[k] ? d[k].n_positions : null),
+        borderColor: colors[k],
+        tension: 0.3,
+        pointRadius: 0,
+        borderWidth: 2
+      });
+    }
+  });
+
+  return {
+    type: 'line',
+    data: { labels, datasets },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      scales: {
+        x: { ticks: { maxTicksAutoSkip: true, maxRotation: 0 } },
+        y: { beginAtZero: true, ticks: { stepSize: 1 } }
+      },
+      plugins: { legend: { position: 'top' } }
+    }
+  };
+}
+
+async function main() {
+  const contentEl = document.getElementById('content');
+  const updatedEl = document.getElementById('lastUpdated');
+
+  try {
+    const summary = await fetchJSON(`${BASE}/summary.json`);
+
+    updatedEl.textContent = `Last updated: ${summary.last_updated || '—'}`;
+
+    // Determine latest date for daily data
+    const latestDate = summary.daily && summary.daily.length > 0
+      ? summary.daily[summary.daily.length - 1].date
+      : null;
+
+    let latestDaily = null;
+    if (latestDate) {
+      try {
+        latestDaily = await fetchJSON(`${BASE}/data/${latestDate}.json`);
+      } catch (e) {
+        console.warn('Could not fetch latest daily JSON:', e);
+      }
+    }
+
+    // Build page
+    let html = '';
+
+    // Summary cards
+    if (summary.portfolios) {
+      html += `<div class="cards">${renderCards(summary.portfolios)}</div>`;
+    }
+
+    // Equity curve
+    if (summary.daily && summary.daily.length > 0) {
+      html += `
+        <div class="chart-container">
+          <h3>Equity Curve</h3>
+          <div class="chart-wrap"><canvas id="equityChart"></canvas></div>
+        </div>`;
+
+      // Daily returns + position count side by side
+      html += `<div class="charts-grid">
+        <div class="chart-container">
+          <h3>Daily Returns (%)</h3>
+          <div class="chart-wrap"><canvas id="returnsChart"></canvas></div>
+        </div>
+        <div class="chart-container">
+          <h3>Position Count</h3>
+          <div class="chart-wrap"><canvas id="positionsChart"></canvas></div>
+        </div>
+      </div>`;
+    }
+
+    // Latest signals tables
+    if (latestDaily) {
+      html += `<div class="tables-grid">`;
+      ['conservative', 'experimental'].forEach(k => {
+        if (latestDaily[k]) {
+          const label = k.charAt(0).toUpperCase() + k.slice(1);
+          html += `
+            <div class="card">
+              <h2>Latest Signals — ${label}</h2>
+              ${renderSignalsTable(k, latestDaily[k])}
+            </div>`;
+        }
+      });
+      html += `</div>`;
+
+      // Reconciliation
+      html += `<div class="tables-grid">`;
+      ['conservative', 'experimental'].forEach(k => {
+        if (latestDaily[k]) {
+          const label = k.charAt(0).toUpperCase() + k.slice(1);
+          html += `
+            <div class="card">
+              <h2>Reconciliation — ${label}</h2>
+              ${renderRecon(latestDaily[k])}
+            </div>`;
+        }
+      });
+      html += `</div>`;
+    }
+
+    contentEl.innerHTML = html;
+
+    // Render charts
+    if (summary.daily && summary.daily.length > 0) {
+      createChart(document.getElementById('equityChart'), buildEquityCurve(summary.daily));
+      if (summary.daily.length > 1) {
+        createChart(document.getElementById('returnsChart'), buildDailyReturns(summary.daily));
+      }
+      createChart(document.getElementById('positionsChart'), buildPositionCount(summary.daily));
+    }
+
+  } catch (err) {
+    console.error(err);
+    contentEl.innerHTML = `
+      <div class="status-msg">
+        <p>Awaiting data</p>
+        <p style="font-size:0.85rem;margin-top:8px;">No portfolio data available yet. Data will appear once the trading system publishes its first daily results to this repository.</p>
+        <p style="font-size:0.75rem;margin-top:16px;color:var(--text-muted);">${err.message}</p>
+      </div>`;
+    updatedEl.textContent = '';
+  }
+}
+
+main();
+</script>
+</body>
+</html>

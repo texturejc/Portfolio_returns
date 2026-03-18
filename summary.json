@@ -2,7 +2,7 @@
   "start_date": "2026-03-10",
   "portfolios": {
     "conservative": {
-      "total_days": 6,
+      "total_days": 7,
       "initial_value": 2000000.0,
       "current_value": 2000000.0,
       "peak_value": 2000000.0,
@@ -11,7 +11,7 @@
       "sharpe_ratio": 0
     },
     "experimental": {
-      "total_days": 6,
+      "total_days": 7,
       "initial_value": 2000000.0,
       "current_value": 2000000.0,
       "peak_value": 2000000.0,
@@ -98,7 +98,20 @@
         "cash": 2000000.0,
         "n_positions": 0
       }
+    },
+    {
+      "date": "2026-03-18",
+      "conservative": {
+        "total_value": 2000000.0,
+        "cash": 2000000.0,
+        "n_positions": 0
+      },
+      "experimental": {
+        "total_value": 2000000.0,
+        "cash": 2000000.0,
+        "n_positions": 0
+      }
     }
   ],
-  "last_updated": "2026-03-17"
+  "last_updated": "2026-03-18"
 }

@@ -2,22 +2,22 @@
   "start_date": "2026-03-10",
   "portfolios": {
     "conservative": {
-      "total_days": 10,
-      "initial_value": 2000000,
-      "current_value": 2001989.31,
+      "total_days": 11,
+      "initial_value": 2059321.0,
+      "current_value": 1999995.0,
       "peak_value": 2064399.22,
-      "total_return_pct": 0.0995,
-      "max_drawdown_pct": -3.0232,
-      "sharpe_ratio": -13.4
+      "total_return_pct": -2.8809,
+      "max_drawdown_pct": -3.1198,
+      "sharpe_ratio": -13.7074
     },
     "experimental": {
-      "total_days": 10,
-      "initial_value": 2000000,
-      "current_value": 1945608.19,
+      "total_days": 11,
+      "initial_value": 2024602.26,
+      "current_value": 1999980.0,
       "peak_value": 2044897.1,
-      "total_return_pct": -2.7196,
-      "max_drawdown_pct": -4.8554,
-      "sharpe_ratio": -6.03
+      "total_return_pct": -1.2162,
+      "max_drawdown_pct": -2.1965,
+      "sharpe_ratio": -1.265
     }
   },
   "daily": [
@@ -149,6 +149,19 @@
         "total_value": 1945608.19,
         "cash": 812819.78,
         "n_positions": 3
+      }
+    },
+    {
+      "date": "2026-03-24",
+      "conservative": {
+        "total_value": 1999995.0,
+        "cash": 1599999.582183838,
+        "n_positions": 1
+      },
+      "experimental": {
+        "total_value": 1999980.0,
+        "cash": 400297.9074859619,
+        "n_positions": 4
       }
     }
   ],

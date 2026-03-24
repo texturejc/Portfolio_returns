@@ -1,6 +1,6 @@
 {
   "date": "2026-03-24",
-  "generated_at": "2026-03-24T15:48:36.708558+00:00",
+  "generated_at": "2026-03-24T15:54:50.810857+00:00",
   "conservative": {
     "predictions": {
       "TLT": 2.3906489148314306e-05,
@@ -54,8 +54,25 @@
       "ZIM": "hold",
       "CF": "hold"
     },
-    "total_value": 2000000.0,
-    "cash": 2000000.0,
-    "positions": {}
+    "total_value": 1999980.0,
+    "cash": 400297.9074859619,
+    "positions": {
+      "AMD": {
+        "quantity": 1973,
+        "avg_price": 202.67999267578125
+      },
+      "AVGO": {
+        "quantity": 1240,
+        "avg_price": 322.510009765625
+      },
+      "NVDA": {
+        "quantity": 2277,
+        "avg_price": 175.63999938964844
+      },
+      "MRVL": {
+        "quantity": 4436,
+        "avg_price": 90.16000366210938
+      }
+    }
   }
 }

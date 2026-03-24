@@ -2,181 +2,157 @@
   "start_date": "2026-03-10",
   "portfolios": {
     "conservative": {
-      "total_days": 12,
-      "initial_value": 2000000.0,
-      "current_value": 1999995.0,
-      "peak_value": 2000000.0,
-      "total_return_pct": -0.0003,
-      "max_drawdown_pct": -0.0003,
-      "sharpe_ratio": -5.02
+      "total_days": 10,
+      "initial_value": 2000000,
+      "current_value": 2001989.31,
+      "peak_value": 2064399.22,
+      "total_return_pct": 0.0995,
+      "max_drawdown_pct": -3.0232,
+      "sharpe_ratio": -13.4
     },
     "experimental": {
-      "total_days": 12,
-      "initial_value": 2000000.0,
-      "current_value": 1999980.0,
-      "peak_value": 2000000.0,
-      "total_return_pct": -0.001,
-      "max_drawdown_pct": -0.001,
-      "sharpe_ratio": -5.02
+      "total_days": 10,
+      "initial_value": 2000000,
+      "current_value": 1945608.19,
+      "peak_value": 2044897.1,
+      "total_return_pct": -2.7196,
+      "max_drawdown_pct": -4.8554,
+      "sharpe_ratio": -6.03
     }
   },
   "daily": [
     {
       "date": "2026-03-10",
       "conservative": {
-        "total_value": 2000000.0,
-        "cash": 2000000.0,
-        "n_positions": 0
+        "total_value": 2059321.0,
+        "cash": 1600003.13,
+        "n_positions": 1
       },
       "experimental": {
-        "total_value": 2000000.0,
-        "cash": 2000000.0,
-        "n_positions": 0
+        "total_value": 2024602.26,
+        "cash": 800202.52,
+        "n_positions": 3
       }
     },
     {
       "date": "2026-03-11",
       "conservative": {
-        "total_value": 2000000.0,
-        "cash": 2000000.0,
-        "n_positions": 0
+        "total_value": 2064399.22,
+        "cash": 1600003.13,
+        "n_positions": 1
       },
       "experimental": {
-        "total_value": 2000000.0,
-        "cash": 2000000.0,
-        "n_positions": 0
+        "total_value": 2044897.1,
+        "cash": 1212787.33,
+        "n_positions": 2
       }
     },
     {
       "date": "2026-03-12",
       "conservative": {
-        "total_value": 2000000.0,
-        "cash": 2000000.0,
-        "n_positions": 0
+        "total_value": 2062975.44,
+        "cash": 1600003.13,
+        "n_positions": 1
       },
       "experimental": {
-        "total_value": 2000000.0,
-        "cash": 2000000.0,
-        "n_positions": 0
+        "total_value": 2034983.41,
+        "cash": 1212787.33,
+        "n_positions": 2
       }
     },
     {
       "date": "2026-03-13",
       "conservative": {
-        "total_value": 2000000.0,
-        "cash": 2000000.0,
-        "n_positions": 0
+        "total_value": 2053958.03,
+        "cash": 1600003.13,
+        "n_positions": 1
       },
       "experimental": {
-        "total_value": 2000000.0,
-        "cash": 2000000.0,
-        "n_positions": 0
+        "total_value": 2016111.73,
+        "cash": 812819.78,
+        "n_positions": 3
       }
     },
     {
       "date": "2026-03-16",
       "conservative": {
-        "total_value": 2000000.0,
-        "cash": 2000000.0,
-        "n_positions": 0
+        "total_value": 2047930.59,
+        "cash": 1600003.13,
+        "n_positions": 1
       },
       "experimental": {
-        "total_value": 2000000.0,
-        "cash": 2000000.0,
-        "n_positions": 0
+        "total_value": 1991343.84,
+        "cash": 812819.78,
+        "n_positions": 3
       }
     },
     {
       "date": "2026-03-17",
       "conservative": {
-        "total_value": 2000000.0,
-        "cash": 2000000.0,
-        "n_positions": 0
+        "total_value": 2047693.31,
+        "cash": 1600003.13,
+        "n_positions": 1
       },
       "experimental": {
-        "total_value": 2000000.0,
-        "cash": 2000000.0,
-        "n_positions": 0
+        "total_value": 2025103.43,
+        "cash": 812819.78,
+        "n_positions": 3
       }
     },
     {
       "date": "2026-03-18",
       "conservative": {
-        "total_value": 2000000.0,
-        "cash": 2000000.0,
-        "n_positions": 0
+        "total_value": 2046459.34,
+        "cash": 1600003.13,
+        "n_positions": 1
       },
       "experimental": {
-        "total_value": 2000000.0,
-        "cash": 2000000.0,
-        "n_positions": 0
+        "total_value": 2019755.64,
+        "cash": 812819.78,
+        "n_positions": 3
       }
     },
     {
       "date": "2026-03-19",
       "conservative": {
-        "total_value": 2000000.0,
-        "cash": 2000000.0,
-        "n_positions": 0
+        "total_value": 2032458.66,
+        "cash": 1600003.13,
+        "n_positions": 1
       },
       "experimental": {
-        "total_value": 2000000.0,
-        "cash": 2000000.0,
-        "n_positions": 0
+        "total_value": 1984327.44,
+        "cash": 812819.78,
+        "n_positions": 3
       }
     },
     {
       "date": "2026-03-20",
       "conservative": {
-        "total_value": 2000000.0,
-        "cash": 2000000.0,
-        "n_positions": 0
+        "total_value": 2014661.16,
+        "cash": 1600003.13,
+        "n_positions": 1
       },
       "experimental": {
-        "total_value": 2000000.0,
-        "cash": 2000000.0,
-        "n_positions": 0
-      }
-    },
-    {
-      "date": "2026-03-23",
-      "conservative": {
-        "total_value": 2000000.0,
-        "cash": 2000000.0,
-        "n_positions": 0
-      },
-      "experimental": {
-        "total_value": 2000000.0,
-        "cash": 2000000.0,
-        "n_positions": 0
+        "total_value": 1976355.76,
+        "cash": 812819.78,
+        "n_positions": 3
       }
     },
     {
       "date": "2026-03-24",
       "conservative": {
-        "total_value": 1999995.0,
-        "cash": 1599999.582183838,
+        "total_value": 2001989.31,
+        "cash": 1600003.13,
         "n_positions": 1
       },
       "experimental": {
-        "total_value": 2000000.0,
-        "cash": 2000000.0,
-        "n_positions": 0
-      }
-    },
-    {
-      "date": "2026-03-24",
-      "conservative": {
-        "total_value": 1999995.0,
-        "cash": 1599999.582183838,
-        "n_positions": 1
-      },
-      "experimental": {
-        "total_value": 1999980.0,
-        "cash": 400297.9074859619,
-        "n_positions": 4
+        "total_value": 1945608.19,
+        "cash": 812819.78,
+        "n_positions": 3
       }
     }
   ],
-  "last_updated": "2026-03-24"
+  "last_updated": "2026-03-24",
+  "currency": "GBP",
+  "currency_symbol": "\u00a3"
 }

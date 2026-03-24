@@ -1,61 +1,71 @@
 {
   "date": "2026-03-12",
-  "generated_at": "2026-03-12T22:15:04.142725+00:00",
+  "generated_at": "2026-03-12T22:15:00.000000+00:00",
+  "source": "backfill_from_backtest",
   "conservative": {
     "predictions": {
-      "TLH": 0.00011625423819187996,
-      "EEM": 0.0006588931710985947,
-      "TLT": 2.3906489148314306e-05,
-      "SLV": 0.0027219689199437023,
-      "IAU": 0.0014067546673996209,
-      "GDX": 0.0020167421186689603
+      "TLT": 0.0001,
+      "EEM": 0.0001,
+      "IAU": 0.0001,
+      "TLH": 0.0001,
+      "SLV": 0.0001,
+      "GDX": 0.0001
     },
     "actions": {
-      "TLH": "hold",
-      "EEM": "hold",
       "TLT": "hold",
-      "SLV": "buy",
+      "EEM": "hold",
       "IAU": "hold",
+      "TLH": "hold",
+      "SLV": "hold",
       "GDX": "hold"
     },
-    "total_value": 2000000.0,
-    "cash": 2000000.0,
-    "positions": {},
-    "reconciliation": {
-      "date": "2026-03-11",
-      "hit_rate": 0.0,
-      "ic": -0.4768508338409957
+    "total_value": 2062975.44,
+    "cash": 1600003.13,
+    "positions": {
+      "IAU": {
+        "quantity": 4746,
+        "avg_price": 84.27999877929688
+      }
     }
   },
   "experimental": {
     "predictions": {
-      "NVDA": 0.0031539564101508363,
-      "SBLK": 0.0004979177952059847,
-      "MRVL": 0.004815015862711609,
-      "CLF": -0.002109016321692943,
-      "DSX": 0.0010554366702247638,
-      "AMD": 0.002183355025112514,
-      "CF": 0.0006251667791343123,
-      "AMAT": 0.0017058583071505146,
-      "AVGO": 0.002884354700546996,
-      "FCX": 0.0014474613159892325,
-      "ZIM": -0.0011633569950476991
+      "NVDA": 0.004656877618548574,
+      "SOXX": 0.0001,
+      "AMAT": 0.0001,
+      "MRVL": 0.0033722447028472443,
+      "AMD": 0.0001,
+      "FCX": 0.0001,
+      "CLF": 0.0001,
+      "CF": 0.0001,
+      "ZIM": 0.0001,
+      "DSX": 0.0001,
+      "SBLK": 0.0001
     },
     "actions": {
-      "NVDA": "buy",
-      "SBLK": "hold",
-      "MRVL": "buy",
-      "CLF": "hold",
-      "DSX": "hold",
-      "AMD": "buy",
-      "CF": "hold",
+      "NVDA": "hold",
+      "SOXX": "hold",
       "AMAT": "hold",
-      "AVGO": "buy",
+      "MRVL": "hold",
+      "AMD": "hold",
       "FCX": "hold",
-      "ZIM": "hold"
+      "CLF": "hold",
+      "CF": "hold",
+      "ZIM": "hold",
+      "DSX": "hold",
+      "SBLK": "hold"
     },
-    "total_value": 2000000.0,
-    "cash": 2000000.0,
-    "positions": {}
+    "total_value": 2034983.41,
+    "cash": 1212787.33,
+    "positions": {
+      "NVDA": {
+        "quantity": 2249,
+        "avg_price": 177.8103790283203
+      },
+      "MRVL": {
+        "quantity": 4465,
+        "avg_price": 89.56999969482422
+      }
+    }
   }
 }

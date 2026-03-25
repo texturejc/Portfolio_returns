@@ -2,22 +2,22 @@
   "start_date": "2026-03-10",
   "portfolios": {
     "conservative": {
-      "total_days": 11,
+      "total_days": 12,
       "initial_value": 2059321.0,
-      "current_value": 1999995.0,
+      "current_value": 2003063.4370689392,
       "peak_value": 2064399.22,
-      "total_return_pct": -2.8809,
-      "max_drawdown_pct": -3.1198,
-      "sharpe_ratio": -13.7074
+      "total_return_pct": -2.7319,
+      "max_drawdown_pct": -2.9711,
+      "sharpe_ratio": -11.5057
     },
     "experimental": {
-      "total_days": 11,
+      "total_days": 12,
       "initial_value": 2024602.26,
-      "current_value": 1999980.0,
+      "current_value": 2008791.874206543,
       "peak_value": 2044897.1,
-      "total_return_pct": -1.2162,
-      "max_drawdown_pct": -2.1965,
-      "sharpe_ratio": -1.265
+      "total_return_pct": -0.7809,
+      "max_drawdown_pct": -1.7656,
+      "sharpe_ratio": -0.7283
     }
   },
   "daily": [
@@ -163,9 +163,22 @@
         "cash": 400297.9074859619,
         "n_positions": 4
       }
+    },
+    {
+      "date": "2026-03-25",
+      "conservative": {
+        "total_value": 2003063.4370689392,
+        "cash": 1200010.2773361206,
+        "n_positions": 1
+      },
+      "experimental": {
+        "total_value": 2008791.874206543,
+        "cash": -1199250.1194152832,
+        "n_positions": 4
+      }
     }
   ],
-  "last_updated": "2026-03-24",
+  "last_updated": "2026-03-25",
   "currency": "GBP",
   "currency_symbol": "\u00a3"
 }

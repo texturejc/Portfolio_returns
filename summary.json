@@ -18,6 +18,24 @@
       "total_return_pct": -4.0935,
       "max_drawdown_pct": -10.2726,
       "sharpe_ratio": -0.9161
+    },
+    "cyclical": {
+      "total_days": 24,
+      "initial_value": 2000000,
+      "current_value": 2000000,
+      "peak_value": 2000000,
+      "total_return_pct": 0,
+      "max_drawdown_pct": 0,
+      "sharpe_ratio": 0
+    },
+    "shipping": {
+      "total_days": 24,
+      "initial_value": 2000000,
+      "current_value": 2000000,
+      "peak_value": 2000000,
+      "total_return_pct": 0,
+      "max_drawdown_pct": 0,
+      "sharpe_ratio": 0
     }
   },
   "daily": [
@@ -32,6 +50,16 @@
         "total_value": 2024602.26,
         "cash": 800202.52,
         "n_positions": 3
+      },
+      "cyclical": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
+      },
+      "shipping": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
       }
     },
     {
@@ -45,6 +73,16 @@
         "total_value": 2044897.1,
         "cash": 1212787.33,
         "n_positions": 2
+      },
+      "cyclical": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
+      },
+      "shipping": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
       }
     },
     {
@@ -58,6 +96,16 @@
         "total_value": 2034983.41,
         "cash": 1212787.33,
         "n_positions": 2
+      },
+      "cyclical": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
+      },
+      "shipping": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
       }
     },
     {
@@ -71,6 +119,16 @@
         "total_value": 2016111.73,
         "cash": 812819.78,
         "n_positions": 3
+      },
+      "cyclical": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
+      },
+      "shipping": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
       }
     },
     {
@@ -84,6 +142,16 @@
         "total_value": 1991343.84,
         "cash": 812819.78,
         "n_positions": 3
+      },
+      "cyclical": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
+      },
+      "shipping": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
       }
     },
     {
@@ -97,6 +165,16 @@
         "total_value": 2025103.43,
         "cash": 812819.78,
         "n_positions": 3
+      },
+      "cyclical": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
+      },
+      "shipping": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
       }
     },
     {
@@ -110,6 +188,16 @@
         "total_value": 2019755.64,
         "cash": 812819.78,
         "n_positions": 3
+      },
+      "cyclical": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
+      },
+      "shipping": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
       }
     },
     {
@@ -123,6 +211,16 @@
         "total_value": 1984327.44,
         "cash": 812819.78,
         "n_positions": 3
+      },
+      "cyclical": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
+      },
+      "shipping": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
       }
     },
     {
@@ -136,6 +234,16 @@
         "total_value": 1976355.76,
         "cash": 812819.78,
         "n_positions": 3
+      },
+      "cyclical": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
+      },
+      "shipping": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
       }
     },
     {
@@ -149,6 +257,16 @@
         "total_value": 1945608.19,
         "cash": 812819.78,
         "n_positions": 3
+      },
+      "cyclical": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
+      },
+      "shipping": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
       }
     },
     {
@@ -162,6 +280,16 @@
         "total_value": 1999980.0,
         "cash": 400297.9074859619,
         "n_positions": 4
+      },
+      "cyclical": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
+      },
+      "shipping": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
       }
     },
     {
@@ -175,6 +303,16 @@
         "total_value": 2008791.874206543,
         "cash": -1199250.1194152832,
         "n_positions": 4
+      },
+      "cyclical": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
+      },
+      "shipping": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
       }
     },
     {
@@ -188,6 +326,16 @@
         "total_value": 2137731.491088867,
         "cash": -2805871.545211792,
         "n_positions": 4
+      },
+      "cyclical": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
+      },
+      "shipping": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
       }
     },
     {
@@ -201,6 +349,16 @@
         "total_value": 2137731.491088867,
         "cash": -2805871.545211792,
         "n_positions": 4
+      },
+      "cyclical": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
+      },
+      "shipping": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
       }
     },
     {
@@ -214,6 +372,16 @@
         "total_value": 1947121.6027374268,
         "cash": -4515663.556022644,
         "n_positions": 4
+      },
+      "cyclical": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
+      },
+      "shipping": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
       }
     },
     {
@@ -227,6 +395,16 @@
         "total_value": 1947121.6027374268,
         "cash": -4515663.556022644,
         "n_positions": 4
+      },
+      "cyclical": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
+      },
+      "shipping": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
       }
     },
     {
@@ -240,6 +418,16 @@
         "total_value": 1805437.511871338,
         "cash": -6073002.8857803345,
         "n_positions": 4
+      },
+      "cyclical": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
+      },
+      "shipping": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
       }
     },
     {
@@ -253,6 +441,16 @@
         "total_value": 1805437.511871338,
         "cash": -6073002.8857803345,
         "n_positions": 4
+      },
+      "cyclical": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
+      },
+      "shipping": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
       }
     },
     {
@@ -266,6 +464,16 @@
         "total_value": 1805437.511871338,
         "cash": -6073002.8857803345,
         "n_positions": 4
+      },
+      "cyclical": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
+      },
+      "shipping": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
       }
     },
     {
@@ -279,6 +487,16 @@
         "total_value": 1805437.511871338,
         "cash": -6073002.8857803345,
         "n_positions": 4
+      },
+      "cyclical": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
+      },
+      "shipping": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
       }
     },
     {
@@ -292,6 +510,16 @@
         "total_value": 1805437.511871338,
         "cash": -6073002.8857803345,
         "n_positions": 4
+      },
+      "cyclical": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
+      },
+      "shipping": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
       }
     },
     {
@@ -305,6 +533,16 @@
         "total_value": 1805437.511871338,
         "cash": -6073002.8857803345,
         "n_positions": 4
+      },
+      "cyclical": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
+      },
+      "shipping": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
       }
     },
     {
@@ -318,6 +556,16 @@
         "total_value": 1805437.511871338,
         "cash": -6073002.8857803345,
         "n_positions": 4
+      },
+      "cyclical": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
+      },
+      "shipping": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
       }
     },
     {
@@ -330,6 +578,16 @@
       "experimental": {
         "total_value": 1918130.15,
         "cash": 1918130.15,
+        "n_positions": 0
+      },
+      "cyclical": {
+        "total_value": 2000000,
+        "cash": 2000000,
+        "n_positions": 0
+      },
+      "shipping": {
+        "total_value": 2000000,
+        "cash": 2000000,
         "n_positions": 0
       }
     }

@@ -34,13 +34,17 @@
     }
   },
   "cyclical": {
-    "total_value": 2000000,
-    "cash": 2000000,
+    "predictions": {},
+    "actions": {},
+    "total_value": 1974071.46,
+    "cash": 1974071.46,
     "positions": {}
   },
   "shipping": {
-    "total_value": 2000000,
-    "cash": 2000000,
+    "predictions": {},
+    "actions": {},
+    "total_value": 2000000.0,
+    "cash": 2000000.0,
     "positions": {}
   }
 }

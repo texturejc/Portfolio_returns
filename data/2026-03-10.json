@@ -73,13 +73,38 @@
     }
   },
   "cyclical": {
-    "total_value": 2000000,
-    "cash": 2000000,
-    "positions": {}
+    "predictions": {
+      "CLF": 0.0001,
+      "FCX": 0.00359598441986163,
+      "CF": 0.0001
+    },
+    "actions": {
+      "CLF": "hold",
+      "FCX": "buy",
+      "CF": "hold"
+    },
+    "total_value": 1999995.0,
+    "cash": 1600010.99,
+    "positions": {
+      "FCX": {
+        "quantity": 6410,
+        "avg_price": 62.400001525878906
+      }
+    }
   },
   "shipping": {
-    "total_value": 2000000,
-    "cash": 2000000,
+    "predictions": {
+      "DSX": 0.0001,
+      "ZIM": 0.0001,
+      "SBLK": 0.0001
+    },
+    "actions": {
+      "DSX": "hold",
+      "ZIM": "hold",
+      "SBLK": "hold"
+    },
+    "total_value": 2000000.0,
+    "cash": 2000000.0,
     "positions": {}
   }
 }

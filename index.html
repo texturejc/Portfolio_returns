@@ -368,9 +368,25 @@ function renderPnLTable(portfolios) {
       <td>${p.total_days || '—'}</td>
     </tr>`;
   }).join('');
+
+  // Combined totals row
+  const entries = Object.values(portfolios);
+  const totalPnl = entries.reduce((s, p) => s + ((p.current_value || 0) - initial), 0);
+  const totalInitial = entries.length * initial;
+  const totalCurrent = entries.reduce((s, p) => s + (p.current_value || 0), 0);
+  const totalReturnPct = (totalCurrent / totalInitial - 1) * 100;
+  const totalPnlClass = totalPnl >= 0 ? 'positive' : 'negative';
+  const totalPnlSign = totalPnl >= 0 ? '+' : '';
+  const totalRow = `<tr style="border-top:2px solid var(--border);">
+    <td style="font-weight:700;">Combined</td>
+    <td class="${totalPnlClass}" style="font-weight:700;">${totalPnlSign}£${Math.abs(totalPnl).toLocaleString('en-GB', {maximumFractionDigits:0})}</td>
+    <td class="${totalPnlClass}" style="font-weight:700;">${fmtPct(totalReturnPct)}</td>
+    <td colspan="3" style="color:var(--text-muted);font-size:0.85rem;">£${totalInitial.toLocaleString('en-GB', {maximumFractionDigits:0})} across ${entries.length} portfolios</td>
+  </tr>`;
+
   return `<table>
     <thead><tr><th>Portfolio</th><th>Net P&L</th><th>Return</th><th>Max DD</th><th>Sharpe</th><th>Days</th></tr></thead>
-    <tbody>${rows}</tbody>
+    <tbody>${rows}${totalRow}</tbody>
   </table>`;
 }
 

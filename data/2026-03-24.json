@@ -18,16 +18,16 @@
       "TLH": "hold",
       "TLT": "hold"
     },
-    "total_value": 1949315.89,
-    "cash": 1949315.89,
+    "total_value": 1915999.28,
+    "cash": 1915999.28,
     "positions": {}
   },
   "experimental": {
     "predictions": {
-      "AMAT": 0.0017058583071505146,
+      "AMAT": 0.001722751732227306,
       "AMD": -0.0025270974401174788,
       "AVGO": 0.002884354700546996,
-      "MRVL": 0.00033253178020669255,
+      "MRVL": -0.0010376549566586497,
       "NVDA": 0.0024903711749607745
     },
     "actions": {
@@ -37,15 +37,15 @@
       "MRVL": "hold",
       "NVDA": "buy"
     },
-    "total_value": 1937466.7,
-    "cash": 1162740.56,
+    "total_value": 1951442.96,
+    "cash": 1171049.02,
     "positions": {
       "AVGO": {
-        "quantity": 1217,
+        "quantity": 1226,
         "avg_price": 318.2900085449219
       },
       "NVDA": {
-        "quantity": 2211,
+        "quantity": 2227,
         "avg_price": 175.1999969482422
       }
     }
@@ -53,42 +53,32 @@
   "cyclical": {
     "predictions": {
       "CF": 0.0006251667791343123,
-      "CLF": 0.003391099565044603,
+      "CLF": 0.0010836502584788887,
       "FCX": 0.0014474613159892325
     },
     "actions": {
       "CF": "hold",
-      "CLF": "buy",
+      "CLF": "hold",
       "FCX": "hold"
     },
-    "total_value": 1991831.32,
-    "cash": 1593466.52,
-    "positions": {
-      "CLF": {
-        "quantity": 47938,
-        "avg_price": 8.3100004196167
-      }
-    }
+    "total_value": 1991846.32,
+    "cash": 1991846.32,
+    "positions": {}
   },
   "shipping": {
     "predictions": {
       "DSX": -0.0016246137364908531,
       "SBLK": 0.0008772768443134417,
-      "ZIM": 0.0036066195872562906
+      "ZIM": 0.0019098760882748306
     },
     "actions": {
       "DSX": "hold",
       "SBLK": "hold",
-      "ZIM": "buy"
+      "ZIM": "hold"
     },
-    "total_value": 1988192.64,
-    "cash": 1590578.23,
-    "positions": {
-      "ZIM": {
-        "quantity": 15027,
-        "avg_price": 26.459999084472656
-      }
-    }
+    "total_value": 1984534.81,
+    "cash": 1984534.81,
+    "positions": {}
   },
   "source": "reconstruct_predictions"
 }

@@ -300,6 +300,80 @@ function buildDailyReturns(daily) {
   };
 }
 
+function buildPnLCurve(daily) {
+  const labels = daily.map(d => d.date);
+  const datasets = [];
+  const initial = 2000000;
+
+  PORTFOLIO_KEYS.forEach(k => {
+    if (daily[0] && daily[0][k]) {
+      datasets.push({
+        label: PORTFOLIO_NAMES[k] || k,
+        data: daily.map(d => d[k] ? d[k].total_value - initial : null),
+        borderColor: PORTFOLIO_COLORS[k],
+        backgroundColor: PORTFOLIO_COLORS[k] + '20',
+        fill: false,
+        tension: 0.3,
+        pointRadius: 2,
+        borderWidth: 2
+      });
+    }
+  });
+
+  return {
+    type: 'line',
+    data: { labels, datasets },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      scales: {
+        x: { type: 'category', ticks: { maxTicksAutoSkip: true, maxRotation: 0 } },
+        y: {
+          ticks: {
+            callback: v => (v >= 0 ? '+£' : '-£') + Math.abs(v/1000).toFixed(1) + 'k'
+          }
+        }
+      },
+      plugins: {
+        legend: { position: 'top' },
+        annotation: {
+          annotations: {
+            zeroLine: {
+              type: 'line',
+              yMin: 0, yMax: 0,
+              borderColor: '#8b949e',
+              borderWidth: 1,
+              borderDash: [5, 5]
+            }
+          }
+        }
+      }
+    }
+  };
+}
+
+function renderPnLTable(portfolios) {
+  const initial = 2000000;
+  const rows = Object.entries(portfolios).map(([key, p]) => {
+    const pnl = (p.current_value || 0) - initial;
+    const pnlClass = pnl >= 0 ? 'positive' : 'negative';
+    const pnlSign = pnl >= 0 ? '+' : '';
+    return `<tr>
+      <td><span class="portfolio-tag ${PORTFOLIO_TAGS[key] || ''}" style="margin:0;">${PORTFOLIO_NAMES[key] || key}</span></td>
+      <td class="${pnlClass}" style="font-weight:600;">${pnlSign}£${Math.abs(pnl).toLocaleString('en-GB', {maximumFractionDigits:0})}</td>
+      <td class="${pnlClass}">${fmtPct(p.total_return_pct)}</td>
+      <td class="negative">${fmtPct(p.max_drawdown_pct)}</td>
+      <td class="${p.sharpe_ratio >= 0 ? 'positive' : 'negative'}">${fmt(p.sharpe_ratio, 3)}</td>
+      <td>${p.total_days || '—'}</td>
+    </tr>`;
+  }).join('');
+  return `<table>
+    <thead><tr><th>Portfolio</th><th>Net P&L</th><th>Return</th><th>Max DD</th><th>Sharpe</th><th>Days</th></tr></thead>
+    <tbody>${rows}</tbody>
+  </table>`;
+}
+
 function buildPositionCount(daily) {
   const labels = daily.map(d => d.date);
   const datasets = [];
@@ -364,13 +438,27 @@ async function main() {
       html += `<div class="cards">${renderCards(summary.portfolios)}</div>`;
     }
 
-    // Equity curve
-    if (summary.daily && summary.daily.length > 0) {
+    // P&L summary table
+    if (summary.portfolios) {
       html += `
+        <div class="card" style="margin-bottom:16px;">
+          <h2>Net Profit & Loss</h2>
+          ${renderPnLTable(summary.portfolios)}
+        </div>`;
+    }
+
+    // Equity curve + P&L curve side by side
+    if (summary.daily && summary.daily.length > 0) {
+      html += `<div class="charts-grid">
         <div class="chart-container">
           <h3>Equity Curve</h3>
           <div class="chart-wrap"><canvas id="equityChart"></canvas></div>
-        </div>`;
+        </div>
+        <div class="chart-container">
+          <h3>Cumulative P&L</h3>
+          <div class="chart-wrap"><canvas id="pnlChart"></canvas></div>
+        </div>
+      </div>`;
 
       // Daily returns + position count side by side
       html += `<div class="charts-grid">
@@ -418,6 +506,7 @@ async function main() {
     // Render charts
     if (summary.daily && summary.daily.length > 0) {
       createChart(document.getElementById('equityChart'), buildEquityCurve(summary.daily));
+      createChart(document.getElementById('pnlChart'), buildPnLCurve(summary.daily));
       if (summary.daily.length > 1) {
         createChart(document.getElementById('returnsChart'), buildDailyReturns(summary.daily));
       }

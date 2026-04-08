@@ -142,6 +142,8 @@
   }
   .tag-conservative { background: rgba(88,166,255,0.15); color: var(--blue); }
   .tag-experimental { background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-cyclical { background: rgba(210,153,34,0.15); color: var(--orange); }
+  .tag-shipping { background: rgba(63,185,80,0.15); color: var(--green); }
 </style>
 </head>
 <body>
@@ -173,9 +175,14 @@ async function fetchJSON(url) {
   return r.json();
 }
 
+const PORTFOLIO_KEYS = ['conservative', 'experimental', 'cyclical', 'shipping'];
+const PORTFOLIO_NAMES = { conservative: 'Conservative', experimental: 'Semiconductor', cyclical: 'Cyclical', shipping: 'Shipping' };
+const PORTFOLIO_TAGS = { conservative: 'tag-conservative', experimental: 'tag-experimental', cyclical: 'tag-cyclical', shipping: 'tag-shipping' };
+const PORTFOLIO_COLORS = { conservative: '#58a6ff', experimental: '#bc8cff', cyclical: '#d29922', shipping: '#3fb950' };
+
 function renderCards(portfolios) {
-  const names = { conservative: 'Conservative', experimental: 'Experimental' };
-  const tags = { conservative: 'tag-conservative', experimental: 'tag-experimental' };
+  const names = PORTFOLIO_NAMES;
+  const tags = PORTFOLIO_TAGS;
   return Object.entries(portfolios).map(([key, p]) => `
     <div class="card">
       <h2>${names[key] || key} <span class="portfolio-tag ${tags[key] || ''}">${key}</span></h2>
@@ -223,16 +230,14 @@ function createChart(ctx, config) {
 function buildEquityCurve(daily) {
   const labels = daily.map(d => d.date);
   const datasets = [];
-  const keys = ['conservative', 'experimental'];
-  const colors = { conservative: '#58a6ff', experimental: '#bc8cff' };
 
-  keys.forEach(k => {
+  PORTFOLIO_KEYS.forEach(k => {
     if (daily[0] && daily[0][k]) {
       datasets.push({
-        label: k.charAt(0).toUpperCase() + k.slice(1),
+        label: PORTFOLIO_NAMES[k] || k,
         data: daily.map(d => d[k] ? d[k].total_value : null),
-        borderColor: colors[k],
-        backgroundColor: colors[k] + '20',
+        borderColor: PORTFOLIO_COLORS[k],
+        backgroundColor: PORTFOLIO_COLORS[k] + '20',
         fill: true,
         tension: 0.3,
         pointRadius: 0,
@@ -259,11 +264,9 @@ function buildEquityCurve(daily) {
 
 function buildDailyReturns(daily) {
   const labels = daily.slice(1).map(d => d.date);
-  const keys = ['conservative', 'experimental'];
-  const colors = { conservative: '#58a6ff', experimental: '#bc8cff' };
   const datasets = [];
 
-  keys.forEach(k => {
+  PORTFOLIO_KEYS.forEach(k => {
     if (daily[0] && daily[0][k]) {
       const returns = [];
       for (let i = 1; i < daily.length; i++) {
@@ -272,10 +275,10 @@ function buildDailyReturns(daily) {
         returns.push(prev && curr ? ((curr / prev - 1) * 100) : null);
       }
       datasets.push({
-        label: k.charAt(0).toUpperCase() + k.slice(1),
+        label: PORTFOLIO_NAMES[k] || k,
         data: returns,
-        backgroundColor: returns.map(r => r != null && r >= 0 ? colors[k] + '99' : '#f8514999'),
-        borderColor: colors[k],
+        backgroundColor: returns.map(r => r != null && r >= 0 ? PORTFOLIO_COLORS[k] + '99' : '#f8514999'),
+        borderColor: PORTFOLIO_COLORS[k],
         borderWidth: 1
       });
     }
@@ -299,16 +302,14 @@ function buildDailyReturns(daily) {
 
 function buildPositionCount(daily) {
   const labels = daily.map(d => d.date);
-  const keys = ['conservative', 'experimental'];
-  const colors = { conservative: '#58a6ff', experimental: '#bc8cff' };
   const datasets = [];
 
-  keys.forEach(k => {
+  PORTFOLIO_KEYS.forEach(k => {
     if (daily[0] && daily[0][k]) {
       datasets.push({
-        label: k.charAt(0).toUpperCase() + k.slice(1),
+        label: PORTFOLIO_NAMES[k] || k,
         data: daily.map(d => d[k] ? d[k].n_positions : null),
-        borderColor: colors[k],
+        borderColor: PORTFOLIO_COLORS[k],
         tension: 0.3,
         pointRadius: 0,
         borderWidth: 2
@@ -387,12 +388,11 @@ async function main() {
     // Latest signals tables
     if (latestDaily) {
       html += `<div class="tables-grid">`;
-      ['conservative', 'experimental'].forEach(k => {
+      PORTFOLIO_KEYS.forEach(k => {
         if (latestDaily[k]) {
-          const label = k.charAt(0).toUpperCase() + k.slice(1);
           html += `
             <div class="card">
-              <h2>Latest Signals — ${label}</h2>
+              <h2>Latest Signals — ${PORTFOLIO_NAMES[k] || k} <span class="portfolio-tag ${PORTFOLIO_TAGS[k] || ''}">${k}</span></h2>
               ${renderSignalsTable(k, latestDaily[k])}
             </div>`;
         }
@@ -401,12 +401,11 @@ async function main() {
 
       // Reconciliation
       html += `<div class="tables-grid">`;
-      ['conservative', 'experimental'].forEach(k => {
+      PORTFOLIO_KEYS.forEach(k => {
         if (latestDaily[k]) {
-          const label = k.charAt(0).toUpperCase() + k.slice(1);
           html += `
             <div class="card">
-              <h2>Reconciliation — ${label}</h2>
+              <h2>Reconciliation — ${PORTFOLIO_NAMES[k] || k} <span class="portfolio-tag ${PORTFOLIO_TAGS[k] || ''}">${k}</span></h2>
               ${renderRecon(latestDaily[k])}
             </div>`;
         }

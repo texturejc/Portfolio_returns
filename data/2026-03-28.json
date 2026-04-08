@@ -32,5 +32,15 @@
         "avg_price": 317.05029911741525
       }
     }
+  },
+  "cyclical": {
+    "total_value": 2000000,
+    "cash": 2000000,
+    "positions": {}
+  },
+  "shipping": {
+    "total_value": 2000000,
+    "cash": 2000000,
+    "positions": {}
   }
 }

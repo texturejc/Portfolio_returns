@@ -19,18 +19,18 @@
       "TLH": "hold",
       "TLT": "hold"
     },
-    "total_value": 1968260.61,
-    "cash": 1574640.37,
+    "total_value": 1937618.77,
+    "cash": 1550106.76,
     "positions": {
       "SLV": {
-        "quantity": 5993,
+        "quantity": 5900,
         "avg_price": 65.68000030517578
       }
     }
   },
   "experimental": {
     "predictions": {
-      "AMAT": 0.001722751732227306,
+      "AMAT": 0.001740955680127669,
       "AMD": 4.696898189884119e-06,
       "AVGO": 0.002884354700546996,
       "MRVL": -0.000954125351514511,
@@ -43,15 +43,15 @@
       "MRVL": "hold",
       "NVDA": "buy"
     },
-    "total_value": 1926278.75,
-    "cash": 1155886.08,
+    "total_value": 1949653.48,
+    "cash": 1170149.86,
     "positions": {
       "AVGO": {
-        "quantity": 1207,
+        "quantity": 1221,
         "avg_price": 319.17047119140625
       },
       "NVDA": {
-        "quantity": 2157,
+        "quantity": 2183,
         "avg_price": 178.55999755859375
       }
     }
@@ -59,31 +59,36 @@
   "cyclical": {
     "predictions": {
       "CF": 0.0006251667791343123,
-      "CLF": -1.1159996462609752e-05,
-      "FCX": 0.0014474613159892325
+      "CLF": -0.00021667224562260196,
+      "FCX": 0.00037902841354498385
     },
     "actions": {
       "CF": "hold",
       "CLF": "hold",
       "FCX": "hold"
     },
-    "total_value": 1991836.32,
-    "cash": 1991836.32,
+    "total_value": 1991846.32,
+    "cash": 1991846.32,
     "positions": {}
   },
   "shipping": {
     "predictions": {
       "DSX": -0.0016246137364908531,
       "SBLK": 0.000412433335678642,
-      "ZIM": -0.0009518687291574726
+      "ZIM": 0.004540500001397108
     },
     "actions": {
       "DSX": "hold",
       "SBLK": "hold",
-      "ZIM": "hold"
+      "ZIM": "buy"
     },
-    "total_value": 1987593.23,
-    "cash": 1987593.23,
-    "positions": {}
+    "total_value": 1987588.23,
+    "cash": 1590076.87,
+    "positions": {
+      "ZIM": {
+        "quantity": 15242,
+        "avg_price": 26.079999923706055
+      }
+    }
   }
 }

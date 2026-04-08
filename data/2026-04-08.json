@@ -52,5 +52,15 @@
     "total_value": 1918130.15,
     "cash": 1918130.15,
     "positions": {}
+  },
+  "cyclical": {
+    "total_value": 2000000,
+    "cash": 2000000,
+    "positions": {}
+  },
+  "shipping": {
+    "total_value": 2000000,
+    "cash": 2000000,
+    "positions": {}
   }
 }

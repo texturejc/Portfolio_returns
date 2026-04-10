@@ -2,40 +2,40 @@
   "start_date": "2026-03-10",
   "portfolios": {
     "conservative": {
-      "total_days": 25,
+      "total_days": 22,
       "initial_value": 2000000,
       "current_value": 2026475.94,
-      "peak_value": 2076171.2591552734,
+      "peak_value": 2026475.94,
       "total_return_pct": 1.3238,
-      "max_drawdown_pct": -2.3936,
-      "sharpe_ratio": 0.5299
+      "max_drawdown_pct": 0.0,
+      "sharpe_ratio": 0.8233
     },
     "experimental": {
-      "total_days": 25,
+      "total_days": 22,
       "initial_value": 2000000,
       "current_value": 1963591.7697967528,
       "peak_value": 2042465.76,
       "total_return_pct": -1.8204,
       "max_drawdown_pct": -3.8617,
-      "sharpe_ratio": -0.1276
+      "sharpe_ratio": -0.8301
     },
     "cyclical": {
-      "total_days": 25,
+      "total_days": 22,
       "initial_value": 2000000,
       "current_value": 2000000.0,
       "peak_value": 2000000.0,
       "total_return_pct": 0.0,
       "max_drawdown_pct": 0.0,
-      "sharpe_ratio": 0.0305
+      "sharpe_ratio": 0.01
     },
     "shipping": {
-      "total_days": 25,
+      "total_days": 22,
       "initial_value": 2000000,
       "current_value": 1999985.0,
       "peak_value": 2000000.0,
       "total_return_pct": -0.0008,
       "max_drawdown_pct": -0.0008,
-      "sharpe_ratio": 0.0354
+      "sharpe_ratio": 0.0193
     }
   },
   "daily": [
@@ -362,29 +362,6 @@
       }
     },
     {
-      "date": "2026-03-28",
-      "conservative": {
-        "total_value": 1947968.2616119385,
-        "cash": 393046.2598991394,
-        "n_positions": 1
-      },
-      "experimental": {
-        "total_value": 1947121.6027374268,
-        "cash": -4515663.556022644,
-        "n_positions": 4
-      },
-      "cyclical": {
-        "total_value": 1974071.46,
-        "cash": 1974071.46,
-        "n_positions": 0
-      },
-      "shipping": {
-        "total_value": 2000000.0,
-        "cash": 2000000.0,
-        "n_positions": 0
-      }
-    },
-    {
       "date": "2026-03-30",
       "conservative": {
         "total_value": 1906965.38,
@@ -477,29 +454,6 @@
       }
     },
     {
-      "date": "2026-04-03",
-      "conservative": {
-        "total_value": 2076171.2591552734,
-        "cash": -1681293.0631332397,
-        "n_positions": 1
-      },
-      "experimental": {
-        "total_value": 1805437.511871338,
-        "cash": -6073002.8857803345,
-        "n_positions": 4
-      },
-      "cyclical": {
-        "total_value": 1974071.46,
-        "cash": 1974071.46,
-        "n_positions": 0
-      },
-      "shipping": {
-        "total_value": 2000000.0,
-        "cash": 2000000.0,
-        "n_positions": 0
-      }
-    },
-    {
       "date": "2026-04-06",
       "conservative": {
         "total_value": 1908679.46,
@@ -566,29 +520,6 @@
         "total_value": 1979919.31,
         "cash": 1979919.31,
         "n_positions": 0
-      }
-    },
-    {
-      "date": "2026-04-08",
-      "conservative": {
-        "total_value": 2026480.94,
-        "cash": 2026480.94,
-        "n_positions": 0
-      },
-      "experimental": {
-        "total_value": 1918115.15,
-        "cash": 767799.8475708007,
-        "n_positions": 3
-      },
-      "cyclical": {
-        "total_value": 2000000.0,
-        "cash": 2000000.0,
-        "n_positions": 0
-      },
-      "shipping": {
-        "total_value": 1999995.0,
-        "cash": 1600018.0884628296,
-        "n_positions": 1
       }
     },
     {

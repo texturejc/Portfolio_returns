@@ -7,7 +7,7 @@
       "current_value": 2053746.9982199096,
       "peak_value": 2053746.9982199096,
       "total_return_pct": 2.6873,
-      "max_drawdown_pct": 0.0,
+      "max_drawdown_pct": -5.505,
       "sharpe_ratio": 1.3774
     },
     "experimental": {
@@ -16,7 +16,7 @@
       "current_value": 2065860.8824371337,
       "peak_value": 2065860.8824371337,
       "total_return_pct": 3.293,
-      "max_drawdown_pct": 0.0,
+      "max_drawdown_pct": -5.8706,
       "sharpe_ratio": 1.5086
     },
     "cyclical": {
@@ -25,7 +25,7 @@
       "current_value": 2000000.0,
       "peak_value": 2000000.0,
       "total_return_pct": 0.0,
-      "max_drawdown_pct": 0.0,
+      "max_drawdown_pct": -0.4077,
       "sharpe_ratio": 0.009
     },
     "shipping": {
@@ -34,7 +34,7 @@
       "current_value": 1999016.169122696,
       "peak_value": 2000000.0,
       "total_return_pct": -0.0492,
-      "max_drawdown_pct": -0.0492,
+      "max_drawdown_pct": -1.0752,
       "sharpe_ratio": -0.1034
     }
   },

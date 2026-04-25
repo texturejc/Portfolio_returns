@@ -3,97 +3,92 @@
   "generated_at": "2026-04-22T22:15:03.602784+00:00",
   "conservative": {
     "predictions": {
+      "EEM": 0.0006588931710985947,
       "GDX": 0.0020167421186689603,
+      "IAU": 0.0014067546673996209,
+      "SLV": 0.0021094102886947555,
       "TLH": 0.00011625423819187996,
-      "SLV": 0.0015997280971868507,
-      "IAU": 0.0014067546673996209
+      "TLT": 2.3906489148314306e-05
     },
     "actions": {
+      "EEM": "hold",
       "GDX": "hold",
+      "IAU": "hold",
+      "SLV": "buy",
       "TLH": "hold",
-      "SLV": "hold",
-      "IAU": "hold"
+      "TLT": "hold"
     },
-    "total_value": 2054437.571401062,
-    "cash": 1641956.0126776122,
+    "total_value": 2032622.26,
+    "cash": 1626165.12,
     "positions": {
       "SLV": {
-        "quantity": 5717,
-        "avg_price": 72.1500015258789
+        "quantity": 5776,
+        "avg_price": 70.37000274658203
       }
-    },
-    "reconciliation": {
-      "date": "2026-04-21",
-      "hit_rate": 1.0,
-      "ic": 0.9802981196837884
     }
   },
   "experimental": {
     "predictions": {
+      "AMAT": 0.001722751732227306,
+      "AMD": 0.001245003192347688,
       "AVGO": 0.002884354700546996,
-      "NVDA": 0.0024903711749607745,
-      "AMAT": 0.0017058583071505146,
-      "MRVL": -0.0008016430851313548,
-      "AMD": -0.0025270974401174788
+      "MRVL": -0.0011861919183083346,
+      "NVDA": 0.0034843760646498336
     },
     "actions": {
-      "AVGO": "buy",
-      "NVDA": "buy",
       "AMAT": "hold",
+      "AMD": "hold",
+      "AVGO": "buy",
       "MRVL": "hold",
-      "AMD": "hold"
+      "NVDA": "buy"
     },
-    "total_value": 2127218.4337371825,
-    "cash": 1279987.7992462157,
+    "total_value": 2229461.3,
+    "cash": 1338285.71,
     "positions": {
       "AVGO": {
-        "quantity": 1053,
-        "avg_price": 402.1700134277344
+        "quantity": 1054,
+        "avg_price": 422.6499938964844
       },
       "NVDA": {
-        "quantity": 2120,
-        "avg_price": 199.8800048828125
+        "quantity": 2201,
+        "avg_price": 202.5
       }
     }
   },
   "cyclical": {
     "predictions": {
-      "CLF": 0.001016738341390887,
-      "FCX": 0.00037902841354498385,
-      "CF": 0.0006251667791343123
+      "CF": 0.0006251667791343123,
+      "CLF": 0.00048041621894947856,
+      "FCX": 0.0014474613159892325
     },
     "actions": {
+      "CF": "hold",
       "CLF": "hold",
-      "FCX": "hold",
-      "CF": "hold"
+      "FCX": "hold"
     },
-    "total_value": 1999995.0,
-    "cash": 2399985.551181793,
-    "positions": {
-      "CLF": {
-        "quantity": -41109,
-        "avg_price": 9.729999542236328
-      }
-    }
+    "total_value": 1991756.18,
+    "cash": 1991756.18,
+    "positions": {}
   },
   "shipping": {
     "predictions": {
-      "SBLK": 0.0008464270826204656,
-      "DSX": -0.0016246137364908531,
-      "ZIM": 0.005292484874610047
+      "DSX": 0.0010554366702247638,
+      "SBLK": 0.000412433335678642,
+      "ZIM": 0.0024452117367467882
     },
     "actions": {
-      "SBLK": "hold",
       "DSX": "hold",
+      "SBLK": "hold",
       "ZIM": "buy"
     },
-    "total_value": 1997065.4845561981,
-    "cash": 1598637.32803154,
+    "total_value": 2006885.44,
+    "cash": 1605532.67,
     "positions": {
       "ZIM": {
-        "quantity": 15184,
-        "avg_price": 26.239999771118164
+        "quantity": 15197,
+        "avg_price": 26.40999984741211
       }
     }
-  }
+  },
+  "source": "reconstruct_predictions"
 }

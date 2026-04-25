@@ -43,8 +43,8 @@
       "MRVL": "hold",
       "NVDA": "buy"
     },
-    "total_value": 1949653.48,
-    "cash": 1170149.86,
+    "total_value": 1949653.0,
+    "cash": 1170149.38,
     "positions": {
       "AVGO": {
         "quantity": 1221,

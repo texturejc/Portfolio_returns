@@ -18,11 +18,11 @@
       "TLH": "hold",
       "TLT": "hold"
     },
-    "total_value": 1995352.98,
-    "cash": 1596324.67,
+    "total_value": 1917400.96,
+    "cash": 1533940.48,
     "positions": {
       "SLV": {
-        "quantity": 5844,
+        "quantity": 5616,
         "avg_price": 68.27999877929688
       }
     }
@@ -42,19 +42,19 @@
       "MRVL": "hold",
       "NVDA": "buy"
     },
-    "total_value": 2048240.59,
-    "cash": 819901.6,
+    "total_value": 2123395.38,
+    "cash": 849664.95,
     "positions": {
       "AMD": {
-        "quantity": 1659,
+        "quantity": 1720,
         "avg_price": 246.8300018310547
       },
       "AVGO": {
-        "quantity": 1078,
+        "quantity": 1118,
         "avg_price": 379.75
       },
       "NVDA": {
-        "quantity": 2163,
+        "quantity": 2243,
         "avg_price": 189.30999755859375
       }
     }
@@ -70,8 +70,8 @@
       "CLF": "hold",
       "FCX": "hold"
     },
-    "total_value": 1991756.18,
-    "cash": 1991756.18,
+    "total_value": 1983635.93,
+    "cash": 1983635.93,
     "positions": {}
   },
   "shipping": {
@@ -85,8 +85,8 @@
       "SBLK": "hold",
       "ZIM": "hold"
     },
-    "total_value": 1999838.49,
-    "cash": 1999838.49,
+    "total_value": 1980586.74,
+    "cash": 1980586.74,
     "positions": {}
   },
   "source": "reconstruct_predictions"

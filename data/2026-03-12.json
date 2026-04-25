@@ -44,7 +44,7 @@
       "NVDA": "buy"
     },
     "total_value": 1977962.99,
-    "cash": 396054.09,
+    "cash": 396076.74,
     "positions": {
       "AMD": {
         "quantity": 2000,
@@ -55,8 +55,8 @@
         "avg_price": 335.2667236328125
       },
       "MRVL": {
-        "quantity": 4512,
-        "avg_price": 87.66999816894531
+        "quantity": 4514,
+        "avg_price": 87.62613677978516
       },
       "NVDA": {
         "quantity": 2160,

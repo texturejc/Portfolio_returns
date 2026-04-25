@@ -38,16 +38,16 @@
       "MRVL": "buy",
       "NVDA": "buy"
     },
-    "total_value": 1940377.69,
-    "cash": 776487.88,
+    "total_value": 1940377.62,
+    "cash": 776506.82,
     "positions": {
       "AVGO": {
         "quantity": 1230,
         "avg_price": 315.2686462402344
       },
       "MRVL": {
-        "quantity": 4429,
-        "avg_price": 87.62000274658203
+        "quantity": 4431,
+        "avg_price": 87.57616424560547
       },
       "NVDA": {
         "quantity": 2151,

@@ -1,0 +1,46 @@
+{
+  "date": "2026-04-27",
+  "generated_at": "2026-04-27T22:15:04.242127+00:00",
+  "conservative": {
+    "total_value": 1944476.26,
+    "cash": 1555606.39,
+    "positions": {
+      "SLV": {
+        "quantity": 5653,
+        "avg_price": 68.79000091552734
+      }
+    }
+  },
+  "experimental": {
+    "total_value": 2385258.05,
+    "cash": 477607.02,
+    "positions": {
+      "MRVL": {
+        "quantity": 2903,
+        "avg_price": 164.30999755859375
+      },
+      "AVGO": {
+        "quantity": 1128,
+        "avg_price": 422.760009765625
+      },
+      "AMD": {
+        "quantity": 1371,
+        "avg_price": 347.80999755859375
+      },
+      "NVDA": {
+        "quantity": 2290,
+        "avg_price": 208.27000427246094
+      }
+    }
+  },
+  "cyclical": {
+    "total_value": 1983635.93,
+    "cash": 1983635.93,
+    "positions": {}
+  },
+  "shipping": {
+    "total_value": 1982593.5,
+    "cash": 1982593.5,
+    "positions": {}
+  }
+}

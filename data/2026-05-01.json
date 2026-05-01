@@ -1,0 +1,83 @@
+{
+  "date": "2026-05-01",
+  "generated_at": "2026-05-01T22:15:04.358480+00:00",
+  "conservative": {
+    "predictions": {
+      "SLV": 0.0015997280971868507,
+      "IAU": 0.0014067546673996209,
+      "GDX": 0.0020167421186689603,
+      "TLH": 0.00011625423819187996,
+      "EEM": 0.0006588931710985947,
+      "TLT": 2.3906489148314306e-05
+    },
+    "actions": {
+      "SLV": "hold",
+      "IAU": "hold",
+      "GDX": "hold",
+      "TLH": "hold",
+      "EEM": "hold",
+      "TLT": "hold"
+    },
+    "total_value": 1933883.12,
+    "cash": 1933883.12,
+    "positions": {}
+  },
+  "experimental": {
+    "predictions": {
+      "AVGO": 0.002884354700546996,
+      "MRVL": -0.002212562603398423,
+      "AMAT": 0.001740955680127669,
+      "NVDA": 0.0034843760646498336,
+      "AMD": 0.0018021797949881752
+    },
+    "actions": {
+      "AVGO": "buy",
+      "MRVL": "hold",
+      "AMAT": "hold",
+      "NVDA": "buy",
+      "AMD": "hold"
+    },
+    "total_value": 2329697.7,
+    "cash": 1398049.43,
+    "positions": {
+      "AVGO": {
+        "quantity": 1116,
+        "avg_price": 417.42999267578125
+      },
+      "NVDA": {
+        "quantity": 2334,
+        "avg_price": 199.57000732421875
+      }
+    }
+  },
+  "cyclical": {
+    "predictions": {
+      "CLF": -0.005185049160200482,
+      "CF": 0.0006251667791343123,
+      "FCX": 0.00037902841354498385
+    },
+    "actions": {
+      "CLF": "sell",
+      "CF": "hold",
+      "FCX": "hold"
+    },
+    "total_value": 1969043.47,
+    "cash": 1969043.47,
+    "positions": {}
+  },
+  "shipping": {
+    "predictions": {
+      "SBLK": -0.0006694873430154162,
+      "DSX": -0.0016246137364908531,
+      "ZIM": 0.0014985883863624539
+    },
+    "actions": {
+      "SBLK": "hold",
+      "DSX": "hold",
+      "ZIM": "hold"
+    },
+    "total_value": 1988518.77,
+    "cash": 1988518.77,
+    "positions": {}
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "date": "2026-05-04",
+  "generated_at": "2026-05-04T22:15:04.235207+00:00",
+  "conservative": {
+    "predictions": {
+      "TLT": 2.3906489148314306e-05,
+      "IAU": 0.0014067546673996209,
+      "GDX": 0.0020167421186689603,
+      "SLV": 0.0015997280971868507,
+      "EEM": 0.0006588931710985947,
+      "TLH": 0.00011625423819187996
+    },
+    "actions": {
+      "TLT": "hold",
+      "IAU": "hold",
+      "GDX": "hold",
+      "SLV": "hold",
+      "EEM": "hold",
+      "TLH": "hold"
+    },
+    "total_value": 1933883.12,
+    "cash": 1933883.12,
+    "positions": {}
+  },
+  "experimental": {
+    "predictions": {
+      "NVDA": 0.0034843760646498336,
+      "MRVL": -0.0008250651894080945,
+      "AVGO": 0.002884354700546996,
+      "AMAT": 0.001740955680127669,
+      "AMD": 0.0018991123385465455
+    },
+    "actions": {
+      "NVDA": "buy",
+      "MRVL": "hold",
+      "AVGO": "buy",
+      "AMAT": "hold",
+      "AMD": "hold"
+    },
+    "total_value": 2331360.2015148923,
+    "cash": 1399662.3800274655,
+    "positions": {
+      "NVDA": {
+        "quantity": 2347,
+        "avg_price": 198.4499969482422
+      },
+      "AVGO": {
+        "quantity": 1106,
+        "avg_price": 421.2799987792969
+      }
+    }
+  },
+  "cyclical": {
+    "predictions": {
+      "CF": 0.0006251667791343123,
+      "CLF": -0.003549395387738093,
+      "FCX": 0.00037902841354498385
+    },
+    "actions": {
+      "CF": "hold",
+      "CLF": "sell",
+      "FCX": "hold"
+    },
+    "total_value": 1969038.4699999997,
+    "cash": 2362837.6685759732,
+    "positions": {
+      "CLF": {
+        "quantity": -37469,
+        "avg_price": 10.510000228881836
+      }
+    }
+  },
+  "shipping": {
+    "predictions": {
+      "DSX": 0.0010554366702247638,
+      "SBLK": 0.0004979177952059847,
+      "ZIM": -0.0020269048891664266
+    },
+    "actions": {
+      "DSX": "hold",
+      "SBLK": "hold",
+      "ZIM": "hold"
+    },
+    "total_value": 1988518.77,
+    "cash": 1988518.77,
+    "positions": {}
+  }
+}

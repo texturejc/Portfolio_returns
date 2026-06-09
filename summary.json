@@ -2,40 +2,40 @@
   "start_date": "2026-03-10",
   "portfolios": {
     "conservative": {
-      "total_days": 65,
+      "total_days": 66,
       "initial_value": 2000000,
       "current_value": 1911164.753796692,
       "peak_value": 2036071.3234686279,
       "total_return_pct": -4.4418,
       "max_drawdown_pct": -6.1347,
-      "sharpe_ratio": -0.8565
+      "sharpe_ratio": -0.8499
     },
     "experimental": {
-      "total_days": 65,
+      "total_days": 66,
       "initial_value": 2000000,
-      "current_value": 2505692.0195080563,
+      "current_value": 2583292.9747998044,
       "peak_value": 2813283.458411865,
-      "total_return_pct": 25.2846,
+      "total_return_pct": 29.1646,
       "max_drawdown_pct": -10.9335,
-      "sharpe_ratio": 2.8147
+      "sharpe_ratio": 3.1137
     },
     "cyclical": {
-      "total_days": 65,
+      "total_days": 66,
       "initial_value": 2000000,
       "current_value": 1841020.0425040433,
       "peak_value": 2000000.0,
       "total_return_pct": -7.949,
       "max_drawdown_pct": -7.949,
-      "sharpe_ratio": -2.6492
+      "sharpe_ratio": -2.6282
     },
     "shipping": {
-      "total_days": 65,
+      "total_days": 66,
       "initial_value": 2000000,
-      "current_value": 1929988.7655883026,
+      "current_value": 1928323.3951068115,
       "peak_value": 2000000.0,
-      "total_return_pct": -3.5006,
+      "total_return_pct": -3.5838,
       "max_drawdown_pct": -5.0885,
-      "sharpe_ratio": -1.9809
+      "sharpe_ratio": -2.014
     }
   },
   "daily": [
@@ -1533,9 +1533,32 @@
         "cash": 2312985.8270697785,
         "n_positions": 1
       }
+    },
+    {
+      "date": "2026-06-09",
+      "conservative": {
+        "total_value": 1911164.753796692,
+        "cash": 1523520.0357180787,
+        "n_positions": 1
+      },
+      "experimental": {
+        "total_value": 2583292.9747998044,
+        "cash": 2583292.9747998044,
+        "n_positions": 0
+      },
+      "cyclical": {
+        "total_value": 1841020.0425040433,
+        "cash": 1467686.4525687406,
+        "n_positions": 1
+      },
+      "shipping": {
+        "total_value": 1928323.3951068115,
+        "cash": 2314304.9470420075,
+        "n_positions": 1
+      }
     }
   ],
-  "last_updated": "2026-06-08",
+  "last_updated": "2026-06-09",
   "currency": "GBP",
   "currency_symbol": "\u00a3"
 }

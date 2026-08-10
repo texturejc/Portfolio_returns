@@ -1,0 +1,93 @@
+{
+  "date": "2026-08-10",
+  "generated_at": "2026-08-10T22:15:04.258073+00:00",
+  "conservative": {
+    "predictions": {
+      "SLV": 0.0021094102886947555,
+      "GDX": 0.0020167421186689603,
+      "EEM": 0.0006588931710985947,
+      "IAU": 0.0014067546673996209,
+      "TLH": 0.00011625423819187996,
+      "TLT": 2.3906489148314306e-05
+    },
+    "actions": {
+      "SLV": "buy",
+      "GDX": "hold",
+      "EEM": "hold",
+      "IAU": "hold",
+      "TLH": "hold",
+      "TLT": "hold"
+    },
+    "total_value": 1889061.2865992738,
+    "cash": 1513471.2865992738,
+    "positions": {
+      "SLV": {
+        "quantity": 6532,
+        "avg_price": 57.5
+      }
+    }
+  },
+  "experimental": {
+    "predictions": {
+      "MRVL": -0.0016224176935476704,
+      "AVGO": 0.002884354700546996,
+      "AMAT": 0.0017058583071505146,
+      "NVDA": 0.003421086214076873,
+      "AMD": -0.0010252528516309725
+    },
+    "actions": {
+      "MRVL": "hold",
+      "AVGO": "buy",
+      "AMAT": "hold",
+      "NVDA": "buy",
+      "AMD": "hold"
+    },
+    "total_value": 2849346.436256103,
+    "cash": 1724906.2065655515,
+    "positions": {
+      "AVGO": {
+        "quantity": 1314,
+        "avg_price": 427.760009765625
+      },
+      "NVDA": {
+        "quantity": 2511,
+        "avg_price": 223.9600067138672
+      }
+    }
+  },
+  "cyclical": {
+    "predictions": {
+      "CF": 0.0006251667791343123,
+      "CLF": -0.00045806321713865296,
+      "FCX": 0.0014474613159892325
+    },
+    "actions": {
+      "CF": "hold",
+      "CLF": "hold",
+      "FCX": "hold"
+    },
+    "total_value": 1761269.4245078275,
+    "cash": 1761269.4245078275,
+    "positions": {}
+  },
+  "shipping": {
+    "predictions": {
+      "DSX": -0.0016246137364908531,
+      "SBLK": 0.0004979177952059847,
+      "ZIM": 0.00861624546924856
+    },
+    "actions": {
+      "DSX": "hold",
+      "SBLK": "hold",
+      "ZIM": "buy"
+    },
+    "total_value": 1918988.0301127625,
+    "cash": 1536712.1355338288,
+    "positions": {
+      "ZIM": {
+        "quantity": 14211,
+        "avg_price": 26.899999618530273
+      }
+    }
+  }
+}

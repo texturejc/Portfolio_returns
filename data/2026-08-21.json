@@ -1,0 +1,102 @@
+{
+  "date": "2026-08-21",
+  "generated_at": "2026-08-21T22:15:03.600491+00:00",
+  "conservative": {
+    "predictions": {
+      "TLH": 0.00011625423819187996,
+      "IAU": 0.0014067546673996209,
+      "SLV": 0.0027219689199437023,
+      "EEM": 0.0006588931710985947,
+      "TLT": 2.3906489148314306e-05,
+      "GDX": 0.0020167421186689603
+    },
+    "actions": {
+      "TLH": "hold",
+      "IAU": "hold",
+      "SLV": "buy",
+      "EEM": "hold",
+      "TLT": "hold",
+      "GDX": "hold"
+    },
+    "total_value": 1916513.8256198121,
+    "cash": 1535331.7065631105,
+    "positions": {
+      "SLV": {
+        "quantity": 6182,
+        "avg_price": 61.65999984741211
+      }
+    },
+    "reconciliation": {
+      "date": "2026-08-20",
+      "hit_rate": 0.6666666666666666,
+      "ic": 0.8440650377095242
+    }
+  },
+  "experimental": {
+    "predictions": {
+      "AMAT": 0.0017058583071505146,
+      "AMD": 0.001388666939651926,
+      "NVDA": 0.0031539564101508363,
+      "AVGO": 0.002884354700546996,
+      "MRVL": 0.0034524146962055815
+    },
+    "actions": {
+      "AMAT": "hold",
+      "AMD": "hold",
+      "NVDA": "buy",
+      "AVGO": "buy",
+      "MRVL": "buy"
+    },
+    "total_value": 2758056.802650146,
+    "cash": 1103996.861045532,
+    "positions": {
+      "NVDA": {
+        "quantity": 2543,
+        "avg_price": 216.85000610351562
+      },
+      "AVGO": {
+        "quantity": 1514,
+        "avg_price": 364.0299987792969
+      },
+      "MRVL": {
+        "quantity": 2197,
+        "avg_price": 251.00999450683594
+      }
+    }
+  },
+  "cyclical": {
+    "predictions": {
+      "CF": 0.0006251667791343123,
+      "FCX": 0.0014474613159892325,
+      "CLF": 0.00018440672056044957
+    },
+    "actions": {
+      "CF": "hold",
+      "FCX": "hold",
+      "CLF": "hold"
+    },
+    "total_value": 1761269.4245078275,
+    "cash": 1761269.4245078275,
+    "positions": {}
+  },
+  "shipping": {
+    "predictions": {
+      "ZIM": 0.0037576700238063205,
+      "SBLK": 0.0008155213869625127,
+      "DSX": 0.0005663973867798849
+    },
+    "actions": {
+      "ZIM": "buy",
+      "SBLK": "hold",
+      "DSX": "hold"
+    },
+    "total_value": 1927240.201974411,
+    "cash": 1538173.2041602326,
+    "positions": {
+      "ZIM": {
+        "quantity": 14325,
+        "avg_price": 27.15999984741211
+      }
+    }
+  }
+}

@@ -2,40 +2,40 @@
   "start_date": "2026-03-10",
   "portfolios": {
     "conservative": {
-      "total_days": 143,
+      "total_days": 144,
       "initial_value": 2000000,
       "current_value": 1895561.9057093812,
       "peak_value": 2036071.3234686279,
       "total_return_pct": -5.2219,
       "max_drawdown_pct": -9.6888,
-      "sharpe_ratio": -0.6208
+      "sharpe_ratio": -0.6186
     },
     "experimental": {
-      "total_days": 143,
+      "total_days": 144,
       "initial_value": 2000000,
-      "current_value": 2808229.824439697,
+      "current_value": 2811980.5875622556,
       "peak_value": 2879649.1646038815,
-      "total_return_pct": 40.4115,
+      "total_return_pct": 40.599,
       "max_drawdown_pct": -10.9335,
-      "sharpe_ratio": 2.2674
+      "sharpe_ratio": 2.2677
     },
     "cyclical": {
-      "total_days": 143,
+      "total_days": 144,
       "initial_value": 2000000,
       "current_value": 1761269.4245078275,
       "peak_value": 2000000.0,
       "total_return_pct": -11.9365,
       "max_drawdown_pct": -11.9557,
-      "sharpe_ratio": -2.0711
+      "sharpe_ratio": -2.0637
     },
     "shipping": {
-      "total_days": 143,
+      "total_days": 144,
       "initial_value": 2000000,
       "current_value": 1977741.5939936829,
       "peak_value": 2000000.0,
       "total_return_pct": -1.1129,
       "max_drawdown_pct": -6.5183,
-      "sharpe_ratio": -0.203
+      "sharpe_ratio": -0.2023
     }
   },
   "daily": [
@@ -3327,9 +3327,32 @@
         "cash": 1581125.301982422,
         "n_positions": 1
       }
+    },
+    {
+      "date": "2026-09-25",
+      "conservative": {
+        "total_value": 1895561.9057093812,
+        "cash": 1513276.2267123414,
+        "n_positions": 1
+      },
+      "experimental": {
+        "total_value": 2811980.5875622556,
+        "cash": 1127499.9000012204,
+        "n_positions": 3
+      },
+      "cyclical": {
+        "total_value": 1761269.4245078275,
+        "cash": 1761269.4245078275,
+        "n_positions": 0
+      },
+      "shipping": {
+        "total_value": 1977741.5939936829,
+        "cash": 1581125.301982422,
+        "n_positions": 1
+      }
     }
   ],
-  "last_updated": "2026-09-24",
+  "last_updated": "2026-09-25",
   "currency": "GBP",
   "currency_symbol": "\u00a3"
 }

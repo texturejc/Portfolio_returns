@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-19",
+  "generated_at": "2026-10-19T22:15:04.209031+00:00",
+  "conservative": {
+    "predictions": {
+      "SLV": 0.0021094102886947555,
+      "GDX": 0.0020167421186689603,
+      "IAU": 0.0014067546673996209,
+      "TLH": 0.00011625423819187996
+    },
+    "actions": {
+      "SLV": "buy",
+      "GDX": "hold",
+      "IAU": "hold",
+      "TLH": "hold"
+    },
+    "total_value": 1851926.0532351686,
+    "cash": 1481002.555321808,
+    "positions": {
+      "SLV": {
+        "quantity": 7201,
+        "avg_price": 51.5099983215332
+      }
+    }
+  },
+  "experimental": {
+    "predictions": {
+      "AVGO": 0.002884354700546996,
+      "AMAT": 0.001740955680127669,
+      "NVDA": 0.0024903711749607745,
+      "MRVL": -0.001272895859984103,
+      "AMD": 0.0008928126949833104
+    },
+    "actions": {
+      "AVGO": "buy",
+      "AMAT": "hold",
+      "NVDA": "buy",
+      "MRVL": "hold",
+      "AMD": "hold"
+    },
+    "total_value": 2667255.2755200192,
+    "cash": 1574413.0030590817,
+    "positions": {
+      "AVGO": {
+        "quantity": 1662,
+        "avg_price": 328.75
+      },
+      "NVDA": {
+        "quantity": 2552,
+        "avg_price": 214.1300048828125
+      }
+    }
+  },
+  "cyclical": {
+    "predictions": {
+      "CLF": 0.001250888234761878,
+      "FCX": 0.00037902841354498385,
+      "CF": 0.0006251667791343123
+    },
+    "actions": {
+      "CLF": "hold",
+      "FCX": "hold",
+      "CF": "hold"
+    },
+    "total_value": 1761269.4245078275,
+    "cash": 1761269.4245078275,
+    "positions": {}
+  },
+  "shipping": {
+    "predictions": {
+      "ZIM": 0.007774158993982118,
+      "DSX": -0.0016246137364908531,
+      "SBLK": -0.0017599808531946258
+    },
+    "actions": {
+      "ZIM": "buy",
+      "DSX": "hold",
+      "SBLK": "hold"
+    },
+    "total_value": 1966885.4897475434,
+    "cash": 1572638.132104416,
+    "positions": {
+      "ZIM": {
+        "quantity": 13497,
+        "avg_price": 29.209999084472656
+      }
+    }
+  }
+}

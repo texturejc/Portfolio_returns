@@ -1,0 +1,89 @@
+{
+  "date": "2026-11-04",
+  "generated_at": "2026-11-04T22:15:04.244419+00:00",
+  "conservative": {
+    "predictions": {
+      "SLV": 0.0015997280971868507,
+      "TLT": 2.3906489148314306e-05,
+      "GDX": 0.0020167421186689603,
+      "IAU": 0.0014067546673996209,
+      "EEM": 0.0006588931710985947,
+      "TLH": 0.00011625423819187996
+    },
+    "actions": {
+      "SLV": "hold",
+      "TLT": "hold",
+      "GDX": "hold",
+      "IAU": "hold",
+      "EEM": "hold",
+      "TLH": "hold"
+    },
+    "total_value": 1821934.1310473634,
+    "cash": 1454913.3535052491,
+    "positions": {
+      "SLV": {
+        "quantity": 8054,
+        "avg_price": 45.56999969482422
+      }
+    },
+    "reconciliation": {
+      "date": "2026-11-03",
+      "hit_rate": 1.0,
+      "ic": 0.8846155316894296
+    }
+  },
+  "experimental": {
+    "predictions": {
+      "AMD": 0.001270095372379984,
+      "AMAT": 0.001722751732227306,
+      "MRVL": 0.0032728182150078126,
+      "AVGO": 0.002884354700546996,
+      "NVDA": 0.0034843760646498336
+    },
+    "actions": {
+      "AMD": "hold",
+      "AMAT": "hold",
+      "MRVL": "buy",
+      "AVGO": "buy",
+      "NVDA": "buy"
+    },
+    "total_value": 2507963.33397644,
+    "cash": 2507963.33397644,
+    "positions": {}
+  },
+  "cyclical": {
+    "predictions": {
+      "CLF": 0.0029446420824280704,
+      "CF": 0.0006251667791343123,
+      "FCX": 0.0014474613159892325
+    },
+    "actions": {
+      "CLF": "buy",
+      "CF": "hold",
+      "FCX": "hold"
+    },
+    "total_value": 1761269.4245078275,
+    "cash": 1761269.4245078275,
+    "positions": {}
+  },
+  "shipping": {
+    "predictions": {
+      "ZIM": 0.0005780132753406054,
+      "DSX": 0.0010554366702247638,
+      "SBLK": 0.0007176308937602429
+    },
+    "actions": {
+      "ZIM": "hold",
+      "DSX": "hold",
+      "SBLK": "hold"
+    },
+    "total_value": 1955274.9377398682,
+    "cash": 2346391.5430026245,
+    "positions": {
+      "ZIM": {
+        "quantity": -13796,
+        "avg_price": 28.350000381469727
+      }
+    }
+  }
+}

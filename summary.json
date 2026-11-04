@@ -2,40 +2,40 @@
   "start_date": "2026-03-10",
   "portfolios": {
     "conservative": {
-      "total_days": 171,
+      "total_days": 172,
       "initial_value": 2000000,
       "current_value": 1821934.1310473634,
       "peak_value": 2036071.3234686279,
       "total_return_pct": -8.9033,
       "max_drawdown_pct": -10.5172,
-      "sharpe_ratio": -0.9999
+      "sharpe_ratio": -0.997
     },
     "experimental": {
-      "total_days": 171,
+      "total_days": 172,
       "initial_value": 2000000,
       "current_value": 2507963.33397644,
       "peak_value": 2942139.35060852,
       "total_return_pct": 25.3982,
       "max_drawdown_pct": -14.7572,
-      "sharpe_ratio": 1.33
+      "sharpe_ratio": 1.326
     },
     "cyclical": {
-      "total_days": 171,
+      "total_days": 172,
       "initial_value": 2000000,
       "current_value": 1761269.4245078275,
       "peak_value": 2000000.0,
       "total_return_pct": -11.9365,
       "max_drawdown_pct": -11.9557,
-      "sharpe_ratio": -1.8902
+      "sharpe_ratio": -1.8846
     },
     "shipping": {
-      "total_days": 171,
+      "total_days": 172,
       "initial_value": 2000000,
       "current_value": 1955274.9377398682,
       "peak_value": 2000000.0,
       "total_return_pct": -2.2363,
       "max_drawdown_pct": -6.5183,
-      "sharpe_ratio": -0.3933
+      "sharpe_ratio": -0.3922
     }
   },
   "daily": [
@@ -3971,9 +3971,32 @@
         "cash": 2346391.5430026245,
         "n_positions": 1
       }
+    },
+    {
+      "date": "2026-11-04",
+      "conservative": {
+        "total_value": 1821934.1310473634,
+        "cash": 1454913.3535052491,
+        "n_positions": 1
+      },
+      "experimental": {
+        "total_value": 2507963.33397644,
+        "cash": 2507963.33397644,
+        "n_positions": 0
+      },
+      "cyclical": {
+        "total_value": 1761269.4245078275,
+        "cash": 1761269.4245078275,
+        "n_positions": 0
+      },
+      "shipping": {
+        "total_value": 1955274.9377398682,
+        "cash": 2346391.5430026245,
+        "n_positions": 1
+      }
     }
   ],
-  "last_updated": "2026-11-03",
+  "last_updated": "2026-11-04",
   "currency": "GBP",
   "currency_symbol": "\u00a3"
 }

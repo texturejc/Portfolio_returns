@@ -2,40 +2,40 @@
   "start_date": "2026-03-10",
   "portfolios": {
     "conservative": {
-      "total_days": 176,
+      "total_days": 177,
       "initial_value": 2000000,
-      "current_value": 1844183.6751223756,
+      "current_value": 1831524.4762850953,
       "peak_value": 2036071.3234686279,
-      "total_return_pct": -7.7908,
+      "total_return_pct": -8.4238,
       "max_drawdown_pct": -10.5172,
-      "sharpe_ratio": -0.845
+      "sharpe_ratio": -0.9177
     },
     "experimental": {
-      "total_days": 176,
+      "total_days": 177,
       "initial_value": 2000000,
       "current_value": 2507963.33397644,
       "peak_value": 2942139.35060852,
       "total_return_pct": 25.3982,
       "max_drawdown_pct": -14.7572,
-      "sharpe_ratio": 1.3107
+      "sharpe_ratio": 1.3069
     },
     "cyclical": {
-      "total_days": 176,
+      "total_days": 177,
       "initial_value": 2000000,
       "current_value": 1761269.4245078275,
       "peak_value": 2000000.0,
       "total_return_pct": -11.9365,
       "max_drawdown_pct": -11.9557,
-      "sharpe_ratio": -1.8626
+      "sharpe_ratio": -1.8572
     },
     "shipping": {
-      "total_days": 176,
+      "total_days": 177,
       "initial_value": 2000000,
-      "current_value": 1956318.4703211975,
+      "current_value": 1950726.3223986817,
       "peak_value": 2000000.0,
-      "total_return_pct": -2.1841,
+      "total_return_pct": -2.4637,
       "max_drawdown_pct": -6.5183,
-      "sharpe_ratio": -0.3715
+      "sharpe_ratio": -0.4231
     }
   },
   "daily": [
@@ -4086,9 +4086,44 @@
         "cash": 1568154.8172049713,
         "n_positions": 1
       }
+    },
+    {
+      "date": "2026-11-11",
+      "conservative": {
+        "total_value": 1831524.4762850953,
+        "cash": 1462705.67991745,
+        "n_positions": 1,
+        "risk_tier": "normal",
+        "drawdown_pct": 0.0,
+        "shadow_total_value": null
+      },
+      "experimental": {
+        "total_value": 2507963.33397644,
+        "cash": 2507963.33397644,
+        "n_positions": 0,
+        "risk_tier": "normal",
+        "drawdown_pct": 0.0,
+        "shadow_total_value": null
+      },
+      "cyclical": {
+        "total_value": 1761269.4245078275,
+        "cash": 1761269.4245078275,
+        "n_positions": 0,
+        "risk_tier": "normal",
+        "drawdown_pct": 0.0,
+        "shadow_total_value": null
+      },
+      "shipping": {
+        "total_value": 1950726.3223986817,
+        "cash": 1559490.0170874787,
+        "n_positions": 1,
+        "risk_tier": "normal",
+        "drawdown_pct": 0.0,
+        "shadow_total_value": null
+      }
     }
   ],
-  "last_updated": "2026-11-10",
+  "last_updated": "2026-11-11",
   "currency": "GBP",
   "currency_symbol": "\u00a3"
 }

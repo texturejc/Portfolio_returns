@@ -1,0 +1,168 @@
+{
+  "date": "2026-11-27",
+  "generated_at": "2026-11-27T22:15:04.200870+00:00",
+  "conservative": {
+    "predictions": {
+      "EEM": 0.0006588931710985947,
+      "TLH": 0.00011625423819187996,
+      "SLV": 0.0015997280971868507,
+      "IAU": 0.0014067546673996209,
+      "GDX": 0.0020167421186689603,
+      "TLT": 2.3906489148314306e-05
+    },
+    "actions": {
+      "EEM": "hold",
+      "TLH": "hold",
+      "SLV": "hold",
+      "IAU": "hold",
+      "GDX": "hold",
+      "TLT": "hold"
+    },
+    "total_value": 1826848.5918360902,
+    "cash": 1826848.5918360902,
+    "positions": {},
+    "risk": {
+      "tier": "paused",
+      "size_multiplier": 0.0,
+      "drawdown_pct": 0.102758,
+      "paused": true,
+      "paused_reason": "Drawdown limit hit: 10.28% >= 10.00%",
+      "paused_since": "2026-11-13"
+    },
+    "shadow": {
+      "total_value": 1751008.080472107,
+      "cash": 1400807.0390216066,
+      "positions": {
+        "SLV": {
+          "quantity": 9506,
+          "avg_price": 36.84000015258789
+        }
+      }
+    },
+    "reconciliation": {
+      "date": "2026-11-26",
+      "hit_rate": 0.6666666666666666,
+      "ic": 0.9207877811732881
+    }
+  },
+  "experimental": {
+    "predictions": {
+      "AMD": 0.002129895722375269,
+      "AMAT": 0.001722751732227306,
+      "AVGO": 0.002884354700546996,
+      "MRVL": 0.0037639651421505237,
+      "NVDA": 0.0034843760646498336
+    },
+    "actions": {
+      "AMD": "buy",
+      "AMAT": "hold",
+      "AVGO": "buy",
+      "MRVL": "buy",
+      "NVDA": "buy"
+    },
+    "total_value": 2507963.33397644,
+    "cash": 2507963.33397644,
+    "positions": {},
+    "risk": {
+      "tier": "paused",
+      "size_multiplier": 0.0,
+      "drawdown_pct": 0.147572,
+      "paused": true,
+      "paused_reason": "Drawdown limit hit: 14.76% >= 10.00%",
+      "paused_since": "2026-11-12"
+    },
+    "shadow": {
+      "total_value": 2282055.418265991,
+      "cash": 456571.9680554196,
+      "positions": {
+        "AMD": {
+          "quantity": 1124,
+          "avg_price": 406.0299987792969
+        },
+        "AVGO": {
+          "quantity": 1517,
+          "avg_price": 300.8599853515625
+        },
+        "MRVL": {
+          "quantity": 3485,
+          "avg_price": 130.92999267578125
+        },
+        "NVDA": {
+          "quantity": 3057,
+          "avg_price": 149.3000030517578
+        }
+      }
+    }
+  },
+  "cyclical": {
+    "predictions": {
+      "FCX": 0.0014474613159892325,
+      "CF": 0.0006251667791343123,
+      "CLF": 0.0035007495743041646
+    },
+    "actions": {
+      "FCX": "hold",
+      "CF": "hold",
+      "CLF": "buy"
+    },
+    "total_value": 1761269.4245078275,
+    "cash": 1761269.4245078275,
+    "positions": {},
+    "risk": {
+      "tier": "paused",
+      "size_multiplier": 0.0,
+      "drawdown_pct": 0.119365,
+      "paused": true,
+      "paused_reason": "Drawdown limit hit: 11.94% >= 10.00%",
+      "paused_since": "2026-11-13"
+    },
+    "shadow": {
+      "total_value": 1809756.2039458463,
+      "cash": 1447808.8692443082,
+      "positions": {
+        "CLF": {
+          "quantity": 32116,
+          "avg_price": 11.270000457763672
+        }
+      }
+    }
+  },
+  "shipping": {
+    "predictions": {
+      "SBLK": 0.0012601350095456667,
+      "ZIM": 0.004714235919171489,
+      "DSX": 0.0010554366702247638
+    },
+    "actions": {
+      "SBLK": "hold",
+      "ZIM": "buy",
+      "DSX": "hold"
+    },
+    "total_value": 1988245.4364600373,
+    "cash": 1590603.6872668457,
+    "positions": {
+      "ZIM": {
+        "quantity": 12877,
+        "avg_price": 30.8799991607666
+      }
+    },
+    "risk": {
+      "tier": "normal",
+      "size_multiplier": 1.0,
+      "drawdown_pct": 0.005875,
+      "paused": false,
+      "paused_reason": "",
+      "paused_since": ""
+    },
+    "shadow": {
+      "total_value": 1988245.4364600373,
+      "cash": 1590603.6872668457,
+      "positions": {
+        "ZIM": {
+          "quantity": 12877,
+          "avg_price": 30.8799991607666
+        }
+      }
+    }
+  }
+}
